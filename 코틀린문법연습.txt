@@ -1,0 +1,28 @@
+fun main(){
+	
+//     for(i in 1..10 step 1){
+//         print("$i :: ")
+//     }
+//     println()
+//     var leng = 5;
+//     for(j in 1..leng)
+//     print("$j / ")
+//     println()
+//     for(i in 1 until leng)
+//     print("$i | ")
+    
+    var one : IntArray = intArrayOf(10,20,30)
+    for (value in one){
+        println(value)
+    }
+    
+    var two : Array<String> = arrayOf("하나", "둘", "셋")
+    for(i in 0..2 step 1){
+    	println(two[i])
+	}
+    var k : Int =0
+    while (k <two.size){
+        println(two[k])
+        k++
+    }
+} 	
