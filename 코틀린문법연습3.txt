@@ -1,0 +1,68 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+// abstract class Animal {
+//         var name : String = ""
+//         abstract fun move()
+//     }
+    
+    
+//     class Tiger : Animal(){
+//         var age : Int = 0;
+//         override fun move(){
+//             println("네 발로 이동한다.")
+//         }
+//     }
+    
+//     class Eagle : Animal(){
+//         var home : String = "";
+//         override fun move(){
+//             println("날개로 날아간다.")
+//         }
+//     }
+// 	fun main(){
+//     var tiger: Tiger
+//     var eagle: Eagle
+//     tiger = Tiger()
+//     eagle = Eagle()
+//     tiger.move()
+//     eagle.move()
+// }
+
+abstract class Animal {
+        var name : String = ""
+        abstract fun move()
+    }
+    
+    interface IAnimal {
+        abstract fun eat()
+    }
+    
+    class ICat : IAnimal{
+        override fun eat(){
+            println("고양이는 생선을 좋아해~")
+        }
+    }
+    
+    class ITiger : Animal(), IAnimal{
+        var age : Int = 0;
+        override fun eat(){
+            println("호랭이는 생고기를 좋아해~")
+        }
+        override fun move(){
+            println("네 발로 이동한다.")
+        }
+        fun catchDear(){
+            println("호랭이는 사슴을 잡는다.")
+        }
+    }
+fun main(){
+    var cat = ICat()
+    var tiger = ITiger()
+    cat.eat()
+    
+    tiger.eat()
+    tiger.move()
+    tiger.catchDear()
+}
